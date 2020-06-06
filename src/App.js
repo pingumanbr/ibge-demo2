@@ -35,7 +35,7 @@ export class App extends Component {
     render() {
         return (
             <div>
-                <h3 className="first">Uncontrolled</h3>
+                <h3 className="first">Ocorrências da COVID-19</h3>
                 <Tree value={this.state.nodes} />
 
               </div>
