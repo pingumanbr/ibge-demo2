@@ -21,7 +21,7 @@
     "uikit-react": "^3.0.20"
   },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "webpack-dev-server --mode development",
     "postinstall": "npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
