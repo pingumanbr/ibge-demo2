@@ -47,12 +47,4 @@ const rootElement = document.getElementById("root");
 
 ReactDOM.render(<App />, rootElement);
 
-var ip = process.env.IP || '0.0.0.0';
-
-var port = process.env.PORT || 8080;
-
-App.listen(port, ip, function() {
- console.log('running at ' + ip + ':' + port);
- });
-
 export default App;
