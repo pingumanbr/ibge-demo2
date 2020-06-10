@@ -20,7 +20,7 @@
     "uikit-react": "^3.0.20"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node bin/www",
     "postinstall": "npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
