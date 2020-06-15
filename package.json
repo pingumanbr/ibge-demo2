@@ -18,10 +18,11 @@
   },
   "scripts": {
     "prepare": "npm install --save  express react react-scripts react-dom primereact primeicons primeflex axios node-sass classnames",
-    "start": "npm start src/index.js",
+    "start": "npm run server",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "node index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
