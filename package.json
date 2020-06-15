@@ -18,7 +18,7 @@
   },
   "scripts": {
     "prepare": "npm install --save  express react react-scripts react-dom primereact primeicons primeflex axios node-sass classnames",
-    "start": "npm run index.js",
+    "start": "npm run src/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
