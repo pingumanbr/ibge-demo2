@@ -2,7 +2,7 @@
   "name": "cliente_tree",
   "version": "0.1.0",
   "private": true,
-  "main": "src/index.js",
+  "main": "index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "prepare": "npm install --save express react",
-    "start": "yarn start",
+    "start": "npm start index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
