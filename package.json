@@ -17,9 +17,8 @@
     "uikit-react": "^3.0.20"
   },
   "scripts": {
-    "start:dev": "webpack-dev-server --mode development",
-    "prestart":"npm install webpack webpack-dev-server --save",
-    "start": "npm start start:dev",
+    "prestart":"",
+    "start": "npm start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
