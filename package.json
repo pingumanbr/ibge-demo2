@@ -3,6 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "main": "index.js",
+  "babel": {
+    "presets": [
+        [
+          "env",
+          {
+            "modules": false
+          }
+        ],
+        "react"
+    ]
+},
   "dependencies": {
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
@@ -24,7 +35,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
   },
   "browserslist": {
     "production": [
