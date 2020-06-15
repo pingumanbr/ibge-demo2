@@ -21,8 +21,8 @@
     "uikit-react": "^3.0.20"
   },
   "scripts": {
-    "start": "npm install --save express react",
-    "poststart": "npm start",
+    "prepare": "npm install --save express react",
+    "start": "npm start",
     "postinstall": "npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
