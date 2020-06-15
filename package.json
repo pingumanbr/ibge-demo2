@@ -17,8 +17,8 @@
     "uikit-react": "^3.0.20"
   },
   "scripts": {
-    "prepare": "npm install --save yarn express react react-scripts react-dom primereact primeicons primeflex axios node-sass classnames",
-    "start": "yarn start",
+    "prepare": "npm install --save  express react react-scripts react-dom primereact primeicons primeflex axios node-sass classnames",
+    "start": "npx nodeshift --web-app --build.env YARN_ENABLED=true --deploy.env NPM_RUN="npx yarn start"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
