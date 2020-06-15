@@ -15,7 +15,6 @@
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
     "uikit-react": "^3.0.20",
-    "webpack": "^4.43.0",
     "webpack-dev-server": "^2.11.1"
   },
   "scripts": {
