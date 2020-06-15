@@ -17,7 +17,7 @@
     "uikit-react": "^3.0.20"
   },
   "scripts": {
-    "prepare": "npm install --save  express react react-scripts react-dom primereact primeicons primeflex axios node-sass classnames",
+    "prepare": "npm install -g npm-install-missing",
     "start": "npm start /src/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
