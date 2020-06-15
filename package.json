@@ -17,8 +17,8 @@
     "uikit-react": "^3.0.20"
   },
   "scripts": {
-    "prepare": "npm install --save webpack express react react-scripts react-dom primereact primeicons primeflex axios node-sass classnames",
-    "start": "webpack",
+    "prepare": "npm install --save webpack webpack-cli webpack-dev-server express react react-scripts react-dom primereact primeicons primeflex axios node-sass classnames",
+    "start": "webpack-dev-server --mode development",
     "build": "webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
