@@ -3,17 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "main": "index.js",
-  "babel": {
-    "presets": [
-        [
-          "env",
-          {
-            "modules": false
-          }
-        ],
-        "react"
-    ]
-},
   "dependencies": {
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
@@ -28,7 +17,7 @@
     "uikit-react": "^3.0.20"
   },
   "scripts": {
-    "prepare": "npm install --save express react react-scripts react-dom primereact primeicons primeflex axios node-sass classnames",
+    "prepare": "npm install --save webpack express react react-scripts react-dom primereact primeicons primeflex axios node-sass classnames",
     "start": "node src/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,6 +25,8 @@
   },
   "eslintConfig": {
     "extends": "react-app",
+    presets: ["env", "react"],
+    plugins: ["transform-es2015-modules-amd"]
   },
   "browserslist": {
     "production": [
