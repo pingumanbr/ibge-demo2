@@ -22,7 +22,7 @@
   },
   "scripts": {
     "prepare": "npm install --save express react",
-    "start": "npm start",
+    "start": "npm start src/index.js",
     "postinstall": "npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
