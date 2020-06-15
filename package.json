@@ -17,15 +17,12 @@
     "uikit-react": "^3.0.20"
   },
   "scripts": {
-    "prepare": "npm install -g npm-install-missing",
-    "start": "npm start --start",
+    "start": "npm start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
+ 
   "browserslist": {
     "production": [
       ">0.2%",
