@@ -17,6 +17,7 @@
     "uikit-react": "^3.0.20"
   },
   "scripts": {
+    "prestart":"npm install -g n",
     "start": "npm start",
     "build": "react-scripts build",
     "test": "react-scripts test",
