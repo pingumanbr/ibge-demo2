@@ -14,11 +14,10 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
-    "uikit-react": "^3.0.20",
-    "webpack-dev-server": "^2.11.5"
+    "uikit-react": "^3.0.20"
   },
   "scripts": {
-    "prestart":"",
+    "prestart":"npm install webpack webpack-dev-server --save",
     "start": "webpack-dev-server --mode development",
     "build": "react-scripts build",
     "test": "react-scripts test",
