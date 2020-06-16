@@ -50,7 +50,8 @@
     "npm": "*"
   },
   "scripts": {
-    "prestart": "npm install --save-dev babel-plugin-transform-es2015-modules-commonjs",
+   "build": "webpack",
+    "postinstall": "npm run build",
     "start": "node src/index.js"
   },
  "babel": {
