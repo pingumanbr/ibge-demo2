@@ -10,7 +10,7 @@ module.exports = {
   devServer: {
     compress: true,
     disableHostCheck: true,   // That solved it
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, '/src/index.js'),
     port:8080
  },      
  module: {
