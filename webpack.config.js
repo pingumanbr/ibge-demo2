@@ -12,7 +12,7 @@ module.exports = {
     disableHostCheck: true,   // That solved it
     publicPath: "/",
     contentBase: "./src",
-    hot: true
+    hot: true,
     port:8080
  },      
  module: {
