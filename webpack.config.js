@@ -4,14 +4,14 @@ var webpack = require('webpack');
 module.exports = {
  entry: __dirname + '/src/index.js',
  output: {
-  path: path.join(__dirname, 'src'),
+  path: path.join(__dirname, 'public'),
   filename: 'bundle.js'
  },
   devServer: {
     compress: true,
     disableHostCheck: true,   // That solved it
-    publicPath: "/",
-    contentBase: "src",
+    //publicPath: "/",
+    contentBase: "public",
     hot: true,
     port:8080
  },      
