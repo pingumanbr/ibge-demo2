@@ -46,8 +46,7 @@
     "node": "*",
     "npm": "*"
   },
-  "scripts": {
-   
+  "scripts": {  
     "postinstall": "npm run build",
     "start": "node src/index.js"
   },
