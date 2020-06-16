@@ -11,7 +11,7 @@ module.exports = {
     compress: true,
     disableHostCheck: true,   // That solved it
     publicPath: "/",
-    contentBase: "./src",
+    contentBase: "src",
     hot: true,
     port:8080
  },      
