@@ -14,14 +14,20 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
-    "uikit-react": "^3.0.20"
+    "uikit-react": "^3.0.20",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "object-assign":"4.1.0"
+  },
+  "engine": {
+    "node": "*",
+    "npm": "*"
   },
   "scripts": {
-    "prestart":"npm install -g npx",
-    "start": "npm start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node src/index.js",
   },
  
   "browserslist": {
