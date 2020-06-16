@@ -48,7 +48,7 @@
   "scripts": {  
     "build": "webpack --mode=development",
     "postinstall": "npm run build",
-    "start": "webpack --mode development"
+    "start": "webpack-dev-server --progress --config webpack.config.js"
   },
  "babel": {
     "presets": ["env", "react"],
