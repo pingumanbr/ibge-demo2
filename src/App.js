@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+//import React, { Component } from 'react';
 import { Tree } from 'primereact/tree';
 import { NodeService } from './service/NodeService';
 import ReactDOM from 'react-dom';
@@ -7,6 +7,7 @@ import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
+const react = require('React');
 
 export class App extends Component {
 
