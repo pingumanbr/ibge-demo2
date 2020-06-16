@@ -9,9 +9,9 @@ module.exports = {
  },
   devServer: {
     compress: true,
-    disableHostCheck: true,   // That solved it
+    disableHostCheck: true, 
     //publicPath: "/",
-    contentBase: "./public",
+    //contentBase: "./public",
     hot: true,
     port:8080
  },      
