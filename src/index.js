@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-
+/*
 var ip = process.env.IP || '0.0.0.0';
 
 var port = process.env.PORT || 8080;
@@ -12,7 +12,7 @@ var port = process.env.PORT || 8080;
 App.listen(port, ip, function() {
  console.log('running at ' + ip + ':' + port);
  });
-
+*/
 
 ReactDOM.render(
   <React.StrictMode>
