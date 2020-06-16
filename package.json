@@ -48,7 +48,7 @@
   "scripts": {  
     "build": "webpack --mode=development",
     "postinstall": "npm run build",
-    "start": "node src/index.js"
+    "start": "webpack --mode development"
   },
  "babel": {
     "presets": ["env", "react"],
