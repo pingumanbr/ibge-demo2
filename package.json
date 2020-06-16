@@ -48,7 +48,7 @@
   "scripts": {  
     "build": "webpack --mode=development",
     "postinstall": "npm run build",
-    "start": "node src/www"
+    "start": "webpack-dev-server --progress --config webpack.config.js --inline --colors"
   },
  "babel": {
     "presets": ["env", "react"],
