@@ -38,7 +38,7 @@
     "npm": "*"
   },
   "scripts": {  
-    "postinstall": "npm run build",
+   
     "start": "node src/index.js"
   },
  "babel": {
