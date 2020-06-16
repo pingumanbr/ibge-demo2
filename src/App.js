@@ -1,4 +1,4 @@
-//import React, { Component } from 'react';
+import React, { Component } from 'react';
 import { Tree } from 'primereact/tree';
 import { NodeService } from './service/NodeService';
 import ReactDOM from 'react-dom';
