@@ -10,7 +10,8 @@ module.exports = {
   devServer: {
     compress: true,
     disableHostCheck: true,   // That solved it
-
+    contentBase: path.join(__dirname, 'public'),
+    port:8080
  },      
  module: {
   rules: [{
