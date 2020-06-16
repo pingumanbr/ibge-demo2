@@ -2,6 +2,9 @@
 var path = require('path');
 var webpack = require('webpack');
 module.exports = {
+ devServer: {
+    watchContentBase: true
+  },
  entry: __dirname + '/src/index.js',
  output: {
  // path: path.join(__dirname, 'src'),
