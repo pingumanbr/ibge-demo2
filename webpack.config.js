@@ -4,8 +4,8 @@ var webpack = require('webpack');
 module.exports = {
  entry: __dirname + '/src/index.js',
  output: {
-  path: path.join(__dirname, 'src'),
-  filename: 'bundle.js'
+ // path: path.join(__dirname, 'src'),
+  filename: __dirname + '/src/bundle.js'
  },
  module: {
   rules: [{
