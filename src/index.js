@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-const react = require('React');
 
 
 var ip = process.env.IP || '0.0.0.0';
