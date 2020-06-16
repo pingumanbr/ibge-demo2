@@ -31,6 +31,7 @@
     "npm": "*"
   },
   "scripts": {
+    "prestart": "npm install --save-dev babel-plugin-transform-es2015-modules-commonjs",
     "start": "node src/index.js"
   },
  "babel": {
