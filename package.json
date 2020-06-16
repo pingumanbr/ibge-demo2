@@ -20,7 +20,11 @@
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "morgan": "^1.7.0",
-    "object-assign":"4.1.0"
+    "object-assign":"4.1.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1"
   },
   "engine": {
     "node": "*",
@@ -29,7 +33,7 @@
   "scripts": {
     "start": "node src/index.js"
   },
- {
+ "babel": {
     "presets": ["env", "react"],
     "plugins": ["transform-es2015-modules-amd"]
  },
