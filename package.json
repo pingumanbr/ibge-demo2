@@ -46,7 +46,8 @@
     "npm": "*"
   },
   "scripts": {  
-    
+    "build": "webpack --mode=development",
+    "postinstall": "npm run build",
     "start": "node src/index.js"
   },
  "babel": {
