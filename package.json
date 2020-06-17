@@ -50,7 +50,7 @@
   "scripts": {  
     "build": "webpack -p",
     "postinstall": "npm run build",
-      "start": "npm run"
+      "start": "npm start src/index.js"
   },
  "babel": {
     "presets": ["env", "react"],
