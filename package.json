@@ -50,8 +50,8 @@
   },
   "scripts": {  
     "build": "webpack -p",
-    "prestart" : "npm audit fix",
-    "start": "webpack-dev-server  --progress --inline --colors "
+    "postinstall": "npm run build",
+     "start": "webpack-dev-server  --progress --inline --colors "
   },
  "babel": {
     "presets": ["env", "react"],
