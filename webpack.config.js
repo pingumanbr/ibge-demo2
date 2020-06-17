@@ -25,7 +25,8 @@ module.exports = {
     publicPath: "/",
     contentBase: "public",
     hot: true,
-    port:8080
+    port:8080,
+    host: 'localhost'  
  },      
  module: {
   rules: [{
