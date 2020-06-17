@@ -13,8 +13,6 @@ const copyWebpackPlugin = new CopyWebpackPlugin([{
     to: './favicon.ico'
 }]);
 
-var APP_DIR = path.resolve(__dirname, '/src');
-
 module.exports = {
  entry: __dirname + '/src/index.js',
  output: {
@@ -24,7 +22,7 @@ module.exports = {
   devServer: {
     compress: true,
     disableHostCheck: true, 
-    publicPath: "http://localhost:8080/public/",
+    publicPath: "/public",
     contentBase: "/public",
     hot: true,
     port:8080
