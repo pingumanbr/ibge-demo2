@@ -25,25 +25,19 @@ module.exports = {
     compress: true,
     disableHostCheck: true, 
     publicPath: "/",
-    contentBase: "./public",
+    contentBase: "/public",
     hot: true,
     port:8080
  },      
  module: {
   rules: [{
-   test: /.jsx?$/,
+   test: /.js?$/,
    loader: 'babel-loader',
    exclude: /node_modules/,
    query: {
     presets: ['env', 'react']
    }
-  },
-      {
-        test : /\.js?/,
-        include : APP_DIR,
-        loader : 'babel-loader'
-      }
-  ,        
+  },       
   {
     test: /\.(png|gif|woff|woff2|eot|ttf|svg)$/,
     loader: "url-loader?limit=100000"
