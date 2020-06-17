@@ -2,7 +2,7 @@
 var path = require('path');
 var webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
     template: "./public/index.html",
@@ -47,10 +47,5 @@ module.exports = {
   test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
   exclude: /node_modules/,
   use: ['file-loader?name=[name].[ext]'] // ?name=[name].[ext] is only necessary to preserve the original file name
-},         
-  {
-   test: /\.css$/,
-   loader: "style-loader!css-loader"
-  }]
- }
+}
 }
