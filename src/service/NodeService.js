@@ -1,5 +1,6 @@
 
 import axios from 'axios';
+import "regenerator-runtime/runtime";
 
 export class NodeService {
 
