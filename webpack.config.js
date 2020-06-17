@@ -23,8 +23,8 @@ module.exports = {
   devServer: {
     compress: true,
     disableHostCheck: true, 
-  
-    contentBase: "/public",
+    publicPath: 'http://0.0.0.0:8080/',
+    contentBase: ".",
     hot: true,
     port:8080,
     host: '0.0.0.0',
