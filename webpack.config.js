@@ -25,7 +25,7 @@ entry: [
   devServer: {
     compress: true,
     disableHostCheck: true, 
-   
+   publicPath: 'http://0.0.0.0:8080/public/'
     contentBase: "public",
     hot: true,
     port:8080,
