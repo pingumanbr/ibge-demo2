@@ -50,7 +50,7 @@
   "scripts": {  
     "build": "webpack --mode=development",
     "postinstall": "npm run build",
-    "start": "webpack-dev-server --host 0.0.0.0 --progress --port 8080 --inline --colors"
+    "start": "webpack-dev-server --mode=development"
   },
  "babel": {
     "presets": ["env", "react"],
