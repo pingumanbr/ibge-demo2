@@ -18,7 +18,7 @@ var APP_DIR = path.resolve(__dirname, '/src');
 module.exports = {
  entry: __dirname + '/src/index.js',
  output: {
-  path: path.join(__dirname, 'public'),
+  path: path.join(__dirname, '/'),
   filename: 'index.js'
  },
   devServer: {
