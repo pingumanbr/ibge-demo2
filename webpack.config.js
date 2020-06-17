@@ -16,16 +16,6 @@ const copyWebpackPlugin = new CopyWebpackPlugin([{
 
 
 module.exports = {
-     presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          esmodules: true,
-        },
-      },
-    ],
-  ],
  entry: [
 'webpack-dev-server/client?http://' + require("ip").address() + ':8080/',
 'webpack/hot/only-dev-server',
