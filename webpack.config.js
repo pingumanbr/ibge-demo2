@@ -4,6 +4,7 @@ var path = require('path');
 var webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
     template: "./public/index.html",
@@ -17,7 +18,7 @@ const copyWebpackPlugin = new CopyWebpackPlugin([{
 
 module.exports = {
  entry: [
-"webpack-dev-server/client?http://" + require("os").hostname() + ":8080/",
+"webpack-dev-server/client?http://0.0.0.0:8080/",
 'webpack/hot/only-dev-server',
 './src/index.js'
 ],
@@ -32,7 +33,7 @@ module.exports = {
     contentBase: "./public",
     hot: true,
     port:8080,
-    
+    host:0.0.0.0
     
  },      
  module: {
