@@ -1,4 +1,5 @@
 //webpack.config.js
+'use strict'
 var path = require('path');
 var webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
@@ -17,11 +18,12 @@ const copyWebpackPlugin = new CopyWebpackPlugin([{
 module.exports = {
  entry: [
 'webpack-dev-server/client?http://0.0.0.0:8080',
+'webpack/hot/only-dev-server',
 './src/index.js'
 ],
  output: {
   publicPath: '/',
-  filename: 'bundle.js'
+  filename: '[name].bundle.js'
  },
   devServer: {
     compress: true,
