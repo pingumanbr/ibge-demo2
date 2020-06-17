@@ -27,7 +27,10 @@ module.exports = {
     hot: true,
     port:8080,
     host: '0.0.0.0',
-    public: '0.0.0.0:8080'
+    public: '0.0.0.0:8080',
+    historyApiFallback: {
+      index: 'index.html'
+    }
  },      
  module: {
   rules: [{
