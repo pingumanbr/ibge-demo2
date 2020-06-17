@@ -17,14 +17,14 @@ const copyWebpackPlugin = new CopyWebpackPlugin([{
 module.exports = {
  entry: __dirname + '/src/index.js',
  output: {
-  path: path.join(__dirname, './public'),
+  publicPath: '/',
   filename: 'bundle.js'
  },
   devServer: {
     compress: true,
     disableHostCheck: true, 
     publicPath: 'http://0.0.0.0:8080/',
-    contentBase: ".",
+    contentBase: "./public",
     hot: true,
     port:8080,
     host: '0.0.0.0',
