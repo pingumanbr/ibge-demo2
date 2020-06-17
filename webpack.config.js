@@ -13,11 +13,9 @@ const copyWebpackPlugin = new CopyWebpackPlugin([{
     to: './favicon.ico'
 }]);
 
+
 module.exports = {
-entry: [
-'webpack-dev-server/client?http://0.0.0.0:8080',
-'./src/index.js'
-],
+ entry: __dirname + '/src/index.js',
  output: {
   path: path.join(__dirname, './public'),
   filename: 'bundle.js'
@@ -25,8 +23,8 @@ entry: [
   devServer: {
     compress: true,
     disableHostCheck: true, 
-   publicPath: 'http://0.0.0.0:8080/public/',
-    contentBase: "public",
+  
+    contentBase: "/public",
     hot: true,
     port:8080,
     host: '0.0.0.0',
