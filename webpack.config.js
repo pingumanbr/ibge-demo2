@@ -3,6 +3,7 @@ var path = require('path');
 var webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
     template: "./public/index.html",
@@ -30,7 +31,15 @@ module.exports = {
     public: '0.0.0.0:8080'
  },      
  module: {
-  rules: [{
+  rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: "css-loader" }
+        ]
+      },
+      {
    test: /.js?$/,
    loader: 'babel-loader',
    exclude: /node_modules/,
