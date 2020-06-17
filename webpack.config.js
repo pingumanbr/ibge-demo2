@@ -3,6 +3,7 @@ var path = require('path');
 var webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+config.entry.app.unshift('webpack-dev-server/client?http://' + require("os").hostname() + ':8080/');
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
     template: "./public/index.html",
