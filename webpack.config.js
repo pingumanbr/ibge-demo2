@@ -15,7 +15,10 @@ const copyWebpackPlugin = new CopyWebpackPlugin([{
 
 
 module.exports = {
- entry: __dirname + '/src/index.js',
+ entry: [
+'webpack-dev-server/client?http://0.0.0.0:8080',
+'./src/index.js'
+],
  output: {
   publicPath: '/',
   filename: 'bundle.js'
