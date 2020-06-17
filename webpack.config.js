@@ -17,12 +17,12 @@ module.exports = {
  entry: __dirname + '/src/index.js',
  output: {
   path: path.join(__dirname, './public'),
-  filename: 'index.js'
+  filename: 'bundle.js'
  },
   devServer: {
     compress: true,
     disableHostCheck: true, 
-    publicPath: "/",
+    publicPath: "/webpack-dev-server/",
     contentBase: "public",
     hot: true,
     port:8080,
