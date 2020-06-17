@@ -16,7 +16,7 @@ const copyWebpackPlugin = new CopyWebpackPlugin([{
 
 
 module.exports = {
- entry: ['babel-regenerator-runtime', './src/index.js'],
+ entry: ['babel-regenerator-runtime', './src/service/NodeService.js'],
  entry: [
 'webpack-dev-server/client?http://' + require("ip").address() + ':8080/',
 'webpack/hot/only-dev-server',
