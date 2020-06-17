@@ -25,7 +25,7 @@ module.exports = {
     compress: true,
     disableHostCheck: true, 
     publicPath: "/public/",
-    contentBase: "public",
+    contentBase: "/public",
     hot: true,
     port:8080
  },      
