@@ -40,7 +40,7 @@ module.exports = {
    query: {
     presets: ['env', 'react']
    }
-  },       
+  },
   {
     test: /\.(png|gif|woff|woff2|eot|ttf|svg)$/,
     loader: "url-loader?limit=100000"
@@ -54,5 +54,14 @@ module.exports = {
    test: /\.css$/,
    loader: "style-loader!css-loader"
   }]
- }
+ },
+    plugins: [
+    new MiniCssExtractPlugin({
+      filename: "css/style.css"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+      title: "Test"
+    })
+  ]
 }
