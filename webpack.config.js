@@ -17,7 +17,7 @@ const copyWebpackPlugin = new CopyWebpackPlugin([{
 
 module.exports = {
  entry: [
-"webpack-dev-server/client?http://" + require("os").hostname() + ":8080/"
+"webpack-dev-server/client?http://" + require("os").hostname() + ":8080/",
 'webpack/hot/only-dev-server',
 './src/index.js'
 ],
