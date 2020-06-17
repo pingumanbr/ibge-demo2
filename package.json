@@ -50,7 +50,7 @@
   "scripts": {  
     "build": "webpack -p",
     "postinstall": "npm run build",
-    "start": "webpack-dev-server  --progress --inline --colors --public demo4-cobad-des.ocp.ibge.gov.br"
+    "start": "webpack-dev-server  --progress --inline --colors "
   },
  "babel": {
     "presets": ["env", "react"],
