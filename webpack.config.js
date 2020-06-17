@@ -2,11 +2,11 @@
 var path = require('path');
 var webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
     template: "./public/index.html",
-    title: "Teste"
+    filename: "./index.html"
 });
 const copyWebpackPlugin = new CopyWebpackPlugin([{
     from: './public/favicon.ico',
@@ -17,20 +17,17 @@ module.exports = {
  entry: __dirname + '/src/index.js',
  output: {
   path: path.join(__dirname, './public'),
-  filename: 'bundle.js'
+  filename: 'index.js'
  },
   devServer: {
     compress: true,
     disableHostCheck: true, 
-   
+    publicPath: "/",
     contentBase: "public",
     hot: true,
     port:8080,
     host: '0.0.0.0',
-    public: '0.0.0.0:8080',
-    historyApiFallback: {
-      index: 'index.html'
-    }
+    public: '0.0.0.0:8080'
  },      
  module: {
   rules: [{
@@ -40,7 +37,7 @@ module.exports = {
    query: {
     presets: ['env', 'react']
    }
-  },
+  },       
   {
     test: /\.(png|gif|woff|woff2|eot|ttf|svg)$/,
     loader: "url-loader?limit=100000"
