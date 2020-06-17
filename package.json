@@ -50,7 +50,8 @@
   "scripts": {  
     "build": "webpack -p",
     "postinstall": "npm run build",
-    "start": "webpack-dev-server  --progress --inline --colors"
+//    "start": "webpack-dev-server  --progress --inline --colors"
+      "start": "npm run"
   },
  "babel": {
     "presets": ["env", "react"],
