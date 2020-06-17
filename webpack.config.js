@@ -26,7 +26,7 @@ module.exports = {
     contentBase: "public",
     hot: true,
     port:8080,
-    host: 'demo4-cobad-des.ocp.ibge.gov.br',
+    host: '0.0.0.0',
     public: '0.0.0.0:8080'
  },      
  module: {
