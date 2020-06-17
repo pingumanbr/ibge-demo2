@@ -50,7 +50,7 @@
   "scripts": {  
     "build": "webpack -p",
     "postinstall": "npm run build",
-    "start": "webpack-dev-server --host 0.0.0.0 --config webpack.config.js --progress --inline --colors --content-base=public"
+    "start": "webpack-dev-server --host 0.0.0.0 --config webpack.config.js --progress --inline --colors --content-base=/public"
   },
  "babel": {
     "presets": ["env", "react"],
