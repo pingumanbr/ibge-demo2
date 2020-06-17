@@ -48,7 +48,7 @@
     "npm": "*"
   },
   "scripts": {  
-    "build": "webpack --mode=development",
+    "build": "webpack -p",
     "postinstall": "npm run build",
     "start": "webpack-dev-server --host 0.0.0.0 --progress --inline --colors --content-base=public"
   },
