@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
     template: "./public/index.html",
-    filename: "./index.html"
+    title: "Teste"
 });
 const copyWebpackPlugin = new CopyWebpackPlugin([{
     from: './public/favicon.ico',
@@ -17,7 +17,7 @@ module.exports = {
  entry: __dirname + '/src/index.js',
  output: {
   path: path.join(__dirname, './public'),
-  filename: 'index.js'
+  filename: 'bundle.js'
  },
   devServer: {
     compress: true,
@@ -54,14 +54,5 @@ module.exports = {
    test: /\.css$/,
    loader: "style-loader!css-loader"
   }]
- },
-    plugins: [
-    new MiniCssExtractPlugin({
-      filename: "css/style.css"
-    }),
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
-      title: "Test"
-    })
-  ]
+ }
 }
