@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Tree } from 'primereact/tree';
 import { Growl } from 'primereact/growl';
-import { InputText } from 'primereact/inputtext';
 import { NodeService } from './service/NodeService';
 import {ContextMenu} from 'primereact/contextmenu';
 
@@ -21,70 +20,38 @@ export class App extends Component {
         this.state = {
             nodes: null,
             selectedNodeKey: null,
+            infomation: null,
+            
             menu : [
+                
                 {
-                    label: 'Edit Value',
+                    label: 'View Key',
                     icon: 'pi pi-search',
     
                     command: () => {
                         this.growl.show({severity: 'success', summary: 'Node Value', detail:this.state.selectedNodeKey});
-                       
+                    }
+                },
+                    {
+                        label: 'Edit Key',
+                        icon: 'pi pi-cog',
+                        command: () => {
+                            this.fUpdate( this.state.selectedNodeKey );
+                        }
                     }
                     
-                }
+                
             ]
         };
 
         this.nodeservice = new NodeService();
 
-        this.typeEditor = this.typeEditor.bind(this);
-        this.requiredValidator = this.requiredValidator.bind(this);
     }
 
     componentDidMount() {
         this.nodeservice.getTreeNodes().then(data => this.setState({nodes: data}));
     }
 
-    onEditorValueChange(props, value) {
-        let newNodes = JSON.parse(JSON.stringify(this.state.nodes));
-        let editedNode = this.findNodeByKey(newNodes, props.node.key);
-        editedNode.data[props.field] = value;
-
-        this.setState({
-            nodes: newNodes
-        });
-    }
-
-    findNodeByKey(nodes, key) {
-        let path = key.split('-');
-        let node;
-
-        while (path.length) {
-            let list = node ? node.children : nodes;
-            node = list[parseInt(path[0], 10)];
-            path.shift();
-        }
-
-        return node;
-    }
-
-    inputTextEditor(props, width) {
-        return (
-            <InputText type="text" value={props.node.data} style={{'width': width, 'padding': 0}}
-                    onChange={(e) => this.onEditorValueChange(props, e.target.value)} />
-        );
-    }
-
-    
-    typeEditor(props) {
-        return this.inputTextEditor(props, '100%');
-    }
-
-    requiredValidator(props) {
-        let value = props.node.data[props.field];
-
-        return value && value.length > 0;
-    }
 
     render() {
         return (
@@ -92,10 +59,13 @@ export class App extends Component {
             <Growl ref={(el) => this.growl = el} />
             <ContextMenu model={this.state.menu} ref={el => this.cm = el} />
 
-            <Tree value={this.state.nodes} 
+            <Tree value={this.state.nodes} expandedKeys={this.state.expandedKeys} 
+                  onToggle={e => this.setState({expandedKeys: e.value}) } 
                  
                  dragdropScope="demo"
                  onDragDrop={event => this.setState({nodes: event.value})}
+
+                 onClick={(e) => this.setState({nodes: e.target.value})}
                  
                  contextMenuSelectionKey={this.state.selectedNodeKey} 
                  onContextMenuSelectionChange={event => this.setState({selectedNodeKey: event.value})}
@@ -104,6 +74,22 @@ export class App extends Component {
             </div>
         )
     }
+
+
+fUpdate = ( info ) => {
+   console.log( "Valor recebido -> " + info );
+   this.updateInfo( info );
+};
+
+updateInfo = async( info ) => {
+       try{
+           await fetch(`http://localhost:5000/data/${info}`,{method:"PUT"}).then(function(response){
+               return response.json();
+           });
+       }catch(err){
+           console.error(err.message);
+       }
+};
 }
 
 const rootElement = document.getElementById("root");
